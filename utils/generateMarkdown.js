@@ -19,6 +19,9 @@ function renderLicenseBadge(license) {
       break;
     case "APM" : 
       return "https://img.shields.io/apm/l/vim-mode";
+      break;
+    default :
+      return "";
   } 
 }
 renderLicenseBadge(license)
@@ -27,21 +30,20 @@ renderLicenseBadge(license)
 function renderLicenseLink(license) {
   switch(license) {
     case "CPAN" :
-      answers.license.link = "https://www.perlfoundation.org/cpan-licensing-guidelines.html";
+      return "https://www.perlfoundation.org/cpan-licensing-guidelines.html";
       break;
     case "AUR" :
-      answers.license.link = "https://img.shields.io/aur/license/an";
+      return "https://img.shields.io/aur/license/an";
       break;
     case "DUB" :
-      answers.license.link = "https://img.shields.io/dub/l/vibe-d";
+      return "https://img.shields.io/dub/l/vibe-d";
       break;
     case "APM" : 
-      answers.license.link = "https://img.shields.io/apm/l/vim-mode";
+      return "https://img.shields.io/apm/l/vim-mode";
       break;
     default: 
-      answers.license.link = "";
+      return "";
   } 
-  console.log(answers.license.link);
 }
 
 // TODO: Create a function that returns the license section of README
@@ -80,8 +82,9 @@ ${answers.installation}
 ${answers.usage}
 
 ## License
-${answers.license}
-<img src="${renderLicenseBadge(answers.license)}">
+license used : ${answers.license}
+<img src="${renderLicenseBadge(answers.license)}" alt="license badge">
+<br><a href="${renderLicenseBadge(answers.license)}">Click here for license info.</a>
 
 ## Contributing
 ${answers.contribution}

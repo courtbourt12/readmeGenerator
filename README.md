@@ -1,7 +1,7 @@
-# sdfsd
+# dfs
 ---
 ## Description
-f
+sdf
 
 <link href="sdf">Click here to go to the deployed project</link>
 
@@ -22,21 +22,22 @@ f
     - Questions
 
 ## Installation
-f
+sdf
 
 ## Usage
-f
+sdf
 
 ## License
-AUR
-<img src="undefined">
+license used : AUR
+<img src="" alt="license badge">
+<br><a href="">Click here for license info.</a>
 
 ## Contributing
-f
+sdf
 
 ## Tests
 
-f
+sdf
 
 <br>
 
@@ -48,6 +49,6 @@ f
 
 If you have any questions, feel free to contact me:
 <ul>
-<li> Github : f </li>
-<li> Email : f </li>
+<li> Github : sdf </li>
+<li> Email : sdf </li>
 </ul>

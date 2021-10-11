@@ -34,7 +34,7 @@ return inquirer.prompt([
     },
     {   type: "input",
         name: "contribution",
-        message: "What are the contribution guidelines?"
+        message: "Who are the contributors?"
     },
     {   type: "checkbox",
         name: "license",
