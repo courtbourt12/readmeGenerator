@@ -55,62 +55,7 @@ return inquirer.prompt([
     },
 ])};
 
-renderLicenseBadge(license)
 
-const generateReadMe = (answers) =>
-`# ${answers.name}
----
-## Description
-${answers.description}
-
-<link href="${answers.url}">Click here to go to the deployed project</link>
-
-<br>
-<br>
-
-<img src="${answers.image}" alt = "Image of the deployed application">
-
-<br>
-<br>
-
-## Table of Contents
-    - Installation
-    - Usage
-    - License
-    - Contributing
-    - Tests
-    - Questions
-
-## Installation
-${answers.installation}
-
-## Usage
-${answers.usage}
-
-## License
-${answers.license}
-
-## Contributing
-${answers.contribution}
-
-## Tests
-
-${answers.testing}
-
-<br>
-
---- 
-
-<br>
-
-## Questions
-
-If you have any questions, feel free to contact me:
-<ul>
-<li> Github : ${answers.github} </li>
-<li> Email : ${answers.email} </li>
-</ul>
-`;
 
 
 // TODO: Create a function to write README file
@@ -120,7 +65,7 @@ const writeReadMe = util.promisify(fs.writeFile);
 // TODO: Create a function to initialize app
 const init = () => {
     questions ()
-    .then((answers) => writeReadMe("README.md", generateReadMe(answers)))
+    .then((answers) => writeReadMe("README.md", generateMarkdown(answers)))
     .then(() => console.log("Nice!"))
     .catch((err) => console.log(err));
     };

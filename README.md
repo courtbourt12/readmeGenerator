@@ -1,14 +1,14 @@
-# d
+# sdfsd
 ---
 ## Description
-d
+f
 
-<link href="d">Click here to go to the deployed project</link>
+<link href="sdf">Click here to go to the deployed project</link>
 
 <br>
 <br>
 
-<img src="d" alt = "Image of the deployed application">
+<img src="sdf" alt = "Image of the deployed application">
 
 <br>
 <br>
@@ -22,20 +22,21 @@ d
     - Questions
 
 ## Installation
-d
+f
 
 ## Usage
-d
+f
 
 ## License
-CPAN
+AUR
+<img src="undefined">
 
 ## Contributing
-d
+f
 
 ## Tests
 
-d
+f
 
 <br>
 
@@ -47,6 +48,6 @@ d
 
 If you have any questions, feel free to contact me:
 <ul>
-<li> Github : r </li>
-<li> Email : t </li>
+<li> Github : f </li>
+<li> Email : f </li>
 </ul>

@@ -8,19 +8,18 @@ const license = {
 // If there is no license, return an empty string
 function renderLicenseBadge(license) {
   switch(license) {
-    case questions.license=="CPAN" :
-      license.badge = "https://img.shields.io/cpan/l/Config-Augeas";
+    case "CPAN" :
+      return "https://img.shields.io/cpan/l/Config-Augeas";
       break;
-    case questions.license=="AUR" :
-      license.badge = "https://img.shields.io/aur/license/an";
+    case "AUR" :
+      return "https://img.shields.io/aur/license/an";
       break;
-    case questions.license=="DUB" :
-      license.badge = "https://img.shields.io/dub/l/vibe-d";
+    case "DUB" :
+      return "https://img.shields.io/dub/l/vibe-d";
       break;
-    case questions.license=="APM" : 
-      license.badge = "https://img.shields.io/apm/l/vim-mode";
+    case "APM" : 
+      return "https://img.shields.io/apm/l/vim-mode";
   } 
-  console.log(license.badge);
 }
 renderLicenseBadge(license)
 // TODO: Create a function that returns the license link
@@ -45,18 +44,68 @@ function renderLicenseLink(license) {
   console.log(answers.license.link);
 }
 
-// // TODO: Create a function that returns the license section of README
-// // If there is no license, return an empty string
-// function renderLicenseSection(license) {}
+// TODO: Create a function that returns the license section of README
+// If there is no license, return an empty string
+function renderLicenseSection(license) {}
 
-// // TODO: Create a function to generate markdown for README
-// function generateMarkdown(data) {
-//   return `# ${data.title}
-  
-// `;
-// }
+// TODO: Create a function to generate markdown for README
+const generateReadMe = (answers) =>
+`# ${answers.name}
+---
+## Description
+${answers.description}
 
-// module.exports = generateMarkdown;
+<link href="${answers.url}">Click here to go to the deployed project</link>
+
+<br>
+<br>
+
+<img src="${answers.image}" alt = "Image of the deployed application">
+
+<br>
+<br>
+
+## Table of Contents
+    - Installation
+    - Usage
+    - License
+    - Contributing
+    - Tests
+    - Questions
+
+## Installation
+${answers.installation}
+
+## Usage
+${answers.usage}
+
+## License
+${answers.license}
+<img src="${renderLicenseBadge(answers.license)}">
+
+## Contributing
+${answers.contribution}
+
+## Tests
+
+${answers.testing}
+
+<br>
+
+--- 
+
+<br>
+
+## Questions
+
+If you have any questions, feel free to contact me:
+<ul>
+<li> Github : ${answers.github} </li>
+<li> Email : ${answers.email} </li>
+</ul>
+`;
+
+module.exports = generateReadMe;
 
 
-//   <image src="https://img.shields.io/endpoint?url=...&style=...">
+
