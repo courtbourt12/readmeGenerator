@@ -2,52 +2,11 @@
 
 const inquirer = require("inquirer");
 const fs = require("fs");
-
-const generateReadMe = (answers) =>
-`# ${answers.name}
----
-## Description
-${answers.description}
-
-<link href="${answers.url}">Click here to go to the deployed project</link>"
-<img src="${answers.image}" alt = "Image of the deployed application">
-
-## Table of Contents
-    - Installation
-    - Usage
-    - License
-    - Contributing
-    - Tests
-    - Questions
-
-## Installation
-${answers.installation}
-
-## Usage
-${answers.usage}
-
-## License
-${answers.license}
-
-## Contributing
-${answers.contribution}
-
-## Tests
-${answers.testing}
---- 
-<br>
-<br>
-## Questions
-If you have any questions, feel free to contact me.
-<ul>
-<li> Github : ${answers.github} </li>
-<li> Email : ${answers.email} </li>
-</ul>
-`
+const util = require("util");
 
 // TODO: Create an array of questions for user input
-questions 
-.prompt([
+const questions = () => { 
+return inquirer.prompt([
     {   type: "input",
         name: "name",
         message: "What is the name of your Project?"
@@ -92,19 +51,76 @@ questions
         name: "email",
         message: "What is your email?"
     },
-])
-.then((answers) => {
-    const userInput = questions(answers);
+])};
+
+const generateReadMe = (answers) =>
+`# ${answers.name}
+---
+## Description
+${answers.description}
+
+<link href="${answers.url}">Click here to go to the deployed project</link>
+
+<br>
+<br>
+
+<img src="${answers.image}" alt = "Image of the deployed application">
+
+<br>
+<br>
+
+## Table of Contents
+    - Installation
+    - Usage
+    - License
+    - Contributing
+    - Tests
+    - Questions
+
+## Installation
+${answers.installation}
+
+## Usage
+${answers.usage}
+
+## License
+${answers.license}
+
+## Contributing
+${answers.contribution}
+
+## Tests
+
+${answers.testing}
+
+<br>
+
+--- 
+
+<br>
+
+## Questions
+
+If you have any questions, feel free to contact me:
+<ul>
+<li> Github : ${answers.github} </li>
+<li> Email : ${answers.email} </li>
+</ul>
+`;
 
 
 // TODO: Create a function to write README file
-fs.writeToFile("README.md", userInput, (err) => {
-    err ? console.log(err) : console.log("Nice!")
-});
-})
+
+const writeReadMe = util.promisify(fs.writeFile);
 
 // TODO: Create a function to initialize app
-function init() {}
+const init = () => {
+    questions ()
+    .then((answers) => writeReadMe("README.md", generateReadMe(answers)))
+    .then(() => console.log("Nice!"))
+    .catch((err) => console.log(err));
+    };
+
 
 // Function call to initialize app
 init();
