@@ -1,14 +1,14 @@
-# dfs
+# ReadMe Generator
 ---
 ## Description
-sdf
+To create a list of questions that enable quick and efficient generation of a ReadMe with the results of the questions.
 
-<link href="sdf">Click here to go to the deployed project</link>
+<link href="https://courtbourt12.github.io/readmeGenerator/">Click here to go to the deployed project</link>
 
 <br>
 <br>
 
-<img src="sdf" alt = "Image of the deployed application">
+<img src="readMe.JPG" alt = "Image of the deployed application">
 
 <br>
 <br>
@@ -22,22 +22,22 @@ sdf
     - Questions
 
 ## Installation
-sdf
+You must download the code from my GitHub repository to be able to use this program.
 
 ## Usage
-sdf
+Once you download the program, you must install the inquirer package, and then you can generate a Readme by typing in your terminal "node index.html"
 
 ## License
-license used : AUR
+license used : MIT License
 <img src="" alt="license badge">
 <br><a href="">Click here for license info.</a>
 
 ## Contributing
-sdf
+Courtney Long
 
 ## Tests
 
-sdf
+No tests created for this program.
 
 <br>
 
@@ -49,6 +49,6 @@ sdf
 
 If you have any questions, feel free to contact me:
 <ul>
-<li> Github : sdf </li>
-<li> Email : sdf </li>
+<li> Github : <a href="https://github.com/courtbourt">Click here to go to my GitHub page.</a> </li>
+<li> Email : courtneylong877@gmail.com </li>
 </ul>

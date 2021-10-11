@@ -39,7 +39,7 @@ return inquirer.prompt([
     {   type: "checkbox",
         name: "license",
         message: "What license did you use?",
-        choices: ["AUR", "CPAN", "NPM", "DUB"],
+        choices: ["Mozilla Public License 2.0", "MIT License", "Eclipse Public License version 2.0", "Apache License 2.0"],
     },
     {   type: "input",
         name: "testing",

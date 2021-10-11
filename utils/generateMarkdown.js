@@ -8,17 +8,17 @@ const license = {
 // If there is no license, return an empty string
 function renderLicenseBadge(license) {
   switch(license) {
-    case "CPAN" :
-      return "https://img.shields.io/cpan/l/Config-Augeas";
+    case "Mozilla Public License 2.0" :
+      return "https://img.shields.io/badge/license-Mozilla-blue";
       break;
-    case "AUR" :
-      return "https://img.shields.io/aur/license/an";
+    case "MIT License" :
+      return "https://img.shields.io/badge/license-MIT-blue";
       break;
-    case "DUB" :
-      return "https://img.shields.io/dub/l/vibe-d";
+    case "Eclipse Public License version 2.0" :
+      return "https://img.shields.io/badge/license-Eclipse%202.0-blue";
       break;
-    case "APM" : 
-      return "https://img.shields.io/apm/l/vim-mode";
+    case "Apache License 2.0" : 
+      return "https://img.shields.io/badge/license-Apache%202.0-blue";
       break;
     default :
       return "";
@@ -29,26 +29,22 @@ renderLicenseBadge(license)
 // If there is no license, return an empty string
 function renderLicenseLink(license) {
   switch(license) {
-    case "CPAN" :
-      return "https://www.perlfoundation.org/cpan-licensing-guidelines.html";
+    case "Mozilla Public License 2.0" :
+      return "https://opensource.org/licenses/MPL-2.0";
       break;
-    case "AUR" :
-      return "https://img.shields.io/aur/license/an";
+    case "MIT License" :
+      return "https://opensource.org/licenses/MIT";
       break;
-    case "DUB" :
-      return "https://img.shields.io/dub/l/vibe-d";
+    case "Eclipse Public License version 2.0" :
+      return "https://opensource.org/licenses/EPL-2.0";
       break;
-    case "APM" : 
-      return "https://img.shields.io/apm/l/vim-mode";
+    case "Apache License 2.0" : 
+      return "https://opensource.org/licenses/Apache-2.0";
       break;
     default: 
       return "";
   } 
 }
-
-// TODO: Create a function that returns the license section of README
-// If there is no license, return an empty string
-function renderLicenseSection(license) {}
 
 // TODO: Create a function to generate markdown for README
 const generateReadMe = (answers) =>
@@ -103,7 +99,7 @@ ${answers.testing}
 
 If you have any questions, feel free to contact me:
 <ul>
-<li> Github : ${answers.github} </li>
+<li> Github : <a href="https://github.com/${answers.github}">Click here to go to my GitHub page.</a> </li>
 <li> Email : ${answers.email} </li>
 </ul>
 `;
