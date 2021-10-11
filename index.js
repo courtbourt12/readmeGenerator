@@ -3,6 +3,7 @@
 const inquirer = require("inquirer");
 const fs = require("fs");
 const util = require("util");
+const generateMarkdown = require("./utils/generateMarkdown")
 
 // TODO: Create an array of questions for user input
 const questions = () => { 
@@ -35,9 +36,10 @@ return inquirer.prompt([
         name: "contribution",
         message: "What are the contribution guidelines?"
     },
-    {   type: "input",
+    {   type: "checkbox",
         name: "license",
-        message: "What license did you use?"
+        message: "What license did you use?",
+        choices: ["AUR", "CPAN", "NPM", "DUB"],
     },
     {   type: "input",
         name: "testing",
@@ -52,6 +54,8 @@ return inquirer.prompt([
         message: "What is your email?"
     },
 ])};
+
+renderLicenseBadge(license)
 
 const generateReadMe = (answers) =>
 `# ${answers.name}
@@ -124,3 +128,5 @@ const init = () => {
 
 // Function call to initialize app
 init();
+
+

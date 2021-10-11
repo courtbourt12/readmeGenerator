@@ -6,9 +6,11 @@ d
 <link href="d">Click here to go to the deployed project</link>
 
 <br>
+<br>
 
 <img src="d" alt = "Image of the deployed application">
 
+<br>
 <br>
 
 ## Table of Contents
@@ -26,7 +28,7 @@ d
 d
 
 ## License
-d
+CPAN
 
 ## Contributing
 d
@@ -45,6 +47,6 @@ d
 
 If you have any questions, feel free to contact me:
 <ul>
-<li> Github : d </li>
-<li> Email : d </li>
+<li> Github : r </li>
+<li> Email : t </li>
 </ul>
