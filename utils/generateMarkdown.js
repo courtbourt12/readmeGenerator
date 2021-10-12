@@ -54,7 +54,7 @@ const generateReadMe = (answers) =>
 ## Description
 ${answers.description}
 
-<link href="${answers.url}">Click here to go to the deployed project</link>
+<a href="${answers.url}">Click here to go to the deployed project</a>
 
 <br>
 <br>
