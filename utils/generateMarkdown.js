@@ -1,51 +1,52 @@
-const license = {
-  badge: "",
-  link: "",
-  markdown: ""
-};
+const license = (answers) =>
+answers.license;
 
 // TODO: Create a function that returns a license badge based on which license is passed in
 // If there is no license, return an empty string
 function renderLicenseBadge(license) {
   switch(license) {
     case "Mozilla Public License 2.0" :
-      return "https://img.shields.io/badge/license-Mozilla-blue";
-      break;
+      return "https://img.shields.io/badge/license-Mozilla-blue.svg";
+      
     case "MIT License" :
-      return "https://img.shields.io/badge/license-MIT-blue";
-      break;
+      return "https://img.shields.io/badge/license-MIT-blue.svg";
+      
     case "Eclipse Public License version 2.0" :
-      return "https://img.shields.io/badge/license-Eclipse%202.0-blue";
-      break;
+      return "https://img.shields.io/badge/license-Eclipse%202.0-blue.svg";
+      
     case "Apache License 2.0" : 
-      return "https://img.shields.io/badge/license-Apache%202.0-blue";
-      break;
-    default :
+     return "https://img.shields.io/badge/license-Apache%202.0-blue.svg";
+    
+    case "No License Used" :
       return "";
-  } 
-}
-renderLicenseBadge(license)
+     } 
+      }
+        
+        
 // TODO: Create a function that returns the license link
 // If there is no license, return an empty string
 function renderLicenseLink(license) {
   switch(license) {
     case "Mozilla Public License 2.0" :
       return "https://opensource.org/licenses/MPL-2.0";
-      break;
+      
     case "MIT License" :
       return "https://opensource.org/licenses/MIT";
-      break;
+        
     case "Eclipse Public License version 2.0" :
       return "https://opensource.org/licenses/EPL-2.0";
-      break;
+      
     case "Apache License 2.0" : 
-      return "https://opensource.org/licenses/Apache-2.0";
-      break;
-    default: 
-      return "";
-  } 
-}
-
+    return "https://opensource.org/licenses/Apache-2.0";
+    
+    case "No License Used" : 
+    return "";
+    } 
+      }
+      
+renderLicenseBadge(license)
+renderLicenseLink(license)
+             
 // TODO: Create a function to generate markdown for README
 const generateReadMe = (answers) =>
 `# ${answers.name}
@@ -79,8 +80,12 @@ ${answers.usage}
 
 ## License
 license used : ${answers.license}
+
 <img src="${renderLicenseBadge(answers.license)}" alt="license badge">
-<br><a href="${renderLicenseBadge(answers.license)}">Click here for license info.</a>
+
+<br>
+
+<a href="${renderLicenseLink(answers.license)}">Click here for license info.</a>
 
 ## Contributing
 ${answers.contribution}
